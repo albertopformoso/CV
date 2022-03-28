@@ -1,0 +1,28 @@
+<div class="tab-cards">
+    {% for repo in repos %}
+        <div class="experience-card mb-3 mt-3 shadow-sm mb-3">
+            <div class="card-content">
+                <div class="p-3">
+                    <img src="../../static/logos/github.png" alt="MERU" class="rounded">
+                </div>
+                <div class="">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ repo.name }}</h5>
+                        <p class="card-text"><small class="text-muted">{{ repo.created_at }} </small></p>
+                        {% if repo.description %}
+                            <p class="card-text">{{ repo.description }}</p>
+                        {% endif %}
+                        <p class="card-text"><small class="text-muted">Main Language: {{ repo.language }} </small></p>
+                        <div>
+                            <a href="{{ repo.html_url }}" target="_blank" class="social">See repository</a>
+                            {% if repo.homepage %}
+                                <a href="{{ repo.homepage }}" target="_blank">Visit site</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+</div>

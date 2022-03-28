@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="my-container">
+        <div class="header d-flex">
+            <div class="px-5">
+                <div class="rounded-circle" >
+                    <div class="p-1">
+                        <img class="rounded-circle profile-picture" src="../static/profile-picture.jpg" width="280" height="280"/>
+                    </div>
+                </div>
+            </div>
+            <div id="my-info">
+                <div class="my-info-content px-0">
+                    <div class="title-name-container">
+                        <!-- <span id="title-name">Python Developer</span> -->
+                        <span id="title-name">DevOps Engineer</span>
+                    </div>
+                    <h1>Alberto Piñón</h1>
+                    <p id="description">Fullstack Developer and Engineer who enjoys taking lead of projects and develop valuable projects that help people and organizations with software tools. I love to code and I'm always motivated to constantly learn new things.
+                        I enjoy working on projects related with web scraping, web development, machine learning, cloud computing and cloud services.</p>
+                    <div class="contact">
+                        <a class="social" href="https://www.linkedin.com/in/alberto-pinon-formoso/" target="_blank">LinkedIn</a>
+                        <a class="social" href="https://github.com/albertopformoso" target="_blank">Github</a>
+                        <a class="social" href="https://www.codewars.com/users/Albertopformoso" target="_blank">CodeWars</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="px-2">
+                <a href="https://www.credential.net/00a8bd76-f6e4-42b7-a7c5-043a85fac3a0?key=ef72d27ffaba747edabb1c38ebae6520efce88d32911dd9b4e301817cdcea921" target="_blank">
+                    <img class="rounded-circle my-badge" src="../static/badges/ACE.png" />
+                </a>
+            </div>
+            <div class="px-2">
+                <a href="https://www.credential.net/33c780ca-e38c-4d87-86b8-9d59b15caa20?key=ce3ddc18acf65b7509bac5fc76feea1b7b5e73f8abff032d81f40b78cc6fca42" target="_blank">
+                    <img class="rounded-circle my-badge" src="../static/badges/PDOE.png" />
+                </a>
+            </div>
+            <div class="px-2">
+                <a href="https://www.credential.net/2427cfd8-07bf-415a-a9fe-5df37d2a04fb?key=40e8069e58cab9f26f67172cb26d70055e2f23cc8dec944870d0d9ae20eb2aa1" target="_blank">
+                    <img class="rounded-circle my-badge" src="../static/badges/PCD.png" />
+                </a>
+            </div>
+        </div>
+        <div class="about-me">
+            <h1>About me</h1>
+            <div class="tags-container">
+                <span class="tags">Python</span>
+                <span class="tags">JavaScript</span>
+                <span class="tags">React</span>
+                <span class="tags">MySQL</span>
+                <span class="tags">PostgreSQL</span>
+                <span class="tags">MongoDB</span>
+                <span class="tags">Git</span>
+                <span class="tags">Web Scraping</span>
+                <span class="tags">APIs</span>
+                <span class="tags">Flask</span>
+                <span class="tags">Django</span>
+                <span class="tags">Express</span>
+                <span class="tags">NodeJS</span>
+                <span class="tags">HTML & CSS</span>
+                <span class="tags">Docker</span>
+                <span class="tags">Kubernetes</span>
+                <span class="tags">Vagrant</span>                
+                <span class="tags">Terraform</span>
+                <span class="tags">Ansible</span>
+                <span class="tags">Jenkins</span>
+                <span class="tags">Bash Scripting</span>
+                <span class="tags">Google Cloud Platform</span>
+            </div>
+        </div>
+        <div>
+            <div class="tab">
+                <button class="tablinks" onclick="openInfo(event, 'Experience')" id="defaultOpen">Experience</button>
+                <button class="tablinks" onclick="openInfo(event, 'Projects')">Projects</button>
+                <button class="tablinks" onclick="openInfo(event, 'Education')">Education</button>
+                <button class="tablinks" onclick="openInfo(event, 'Licenses')">Certifications</button>
+            </div>
+              
+              <!-- Tab content -->
+            <div id="Experience" class="tabcontent">
+                <div class="tab-content">
+                    {% include 'details/experience.html' %}
+                </div>
+            </div>
+
+            <div id="Projects" class="tabcontent">
+                <div class="tab-content">
+                    {% include 'details/projects.html' %}
+                </div>
+            </div>
+            
+            <div id="Education" class="tabcontent">
+                <div class="tab-content">
+                    {% include 'details/education.html' %}
+                </div>
+            </div>
+            
+            <div id="Licenses" class="tabcontent">
+                <div class="tab-content">
+                    {% include 'details/licenses.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock  %}

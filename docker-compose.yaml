@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    container_name: py_app
+    tty: true
+    stdin_open: true
+    restart: on-failure
+    ports:
+      - 5000:5000
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: cv_app:1.0
+    volumes:
+      - py_app:/usr/app
+
+volumes:
+  py_app:
+    external: true

@@ -2,7 +2,6 @@ FROM python:3.8 as custom
 
 WORKDIR /usr/app
 
-# COPY . .
 COPY /src ./src
 COPY .env .
 COPY app.py .
